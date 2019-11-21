@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+//synchronized 同一时间只有一个线程调用
 @Slf4j
 public class SynchronizedExample1 {
 
