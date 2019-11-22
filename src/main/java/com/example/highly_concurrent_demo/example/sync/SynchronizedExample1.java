@@ -10,7 +10,7 @@ import java.util.concurrent.Executors;
 public class SynchronizedExample1 {
 
 
-    //synchronized修饰代码块
+    //synchronized修饰代码块 非公平锁 采用cas技术
     public  void  test1(){
         synchronized (this){
             for (int i = 0; i < 10; i++) {

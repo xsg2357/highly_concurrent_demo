@@ -1,5 +1,6 @@
-package com.example.highly_concurrent_demo.example.count;
+package com.example.highly_concurrent_demo.aqs.lock;
 
+import com.example.highly_concurrent_demo.annoations.NotThreadSafe;
 import com.example.highly_concurrent_demo.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,14 +8,15 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * volatile 修饰变量
+ * lock 的用法
  */
 @Slf4j
 @ThreadSafe
-public class CountExample3 {
+public class LockExample2 {
 
     //请求总数
     public static  int  clientTotal = 5000;
@@ -24,6 +26,8 @@ public class CountExample3 {
 
     //count:4955
     public static volatile  int count = 0;
+
+    private  static  final Lock lock = new ReentrantLock();
 
     public static void main(String[] args) throws InterruptedException {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -49,8 +53,17 @@ public class CountExample3 {
 
     }
 
-    public  synchronized static  void  add(){
-        count ++;
+    public  static  void  add(){
+
+        lock.lock();
+
+        try {
+
+            count ++;
+        }finally {
+            lock.unlock();
+        }
+
         //        count.getAndIncrement();
     }
 
