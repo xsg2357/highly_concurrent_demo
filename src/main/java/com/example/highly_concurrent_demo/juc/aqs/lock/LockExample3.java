@@ -1,4 +1,4 @@
-package com.example.highly_concurrent_demo.aqs.lock;
+package com.example.highly_concurrent_demo.juc.aqs.lock;
 
 import com.example.highly_concurrent_demo.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
@@ -6,12 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Hashtable;
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**

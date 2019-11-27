@@ -1,4 +1,4 @@
-package com.example.highly_concurrent_demo.aqs.lock;
+package com.example.highly_concurrent_demo.juc.aqs.lock;
 
 import com.example.highly_concurrent_demo.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;

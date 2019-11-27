@@ -1,4 +1,4 @@
-package com.example.highly_concurrent_demo.aqs;
+package com.example.highly_concurrent_demo.juc.aqs;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,10 +7,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Slf4j
-public class CyclicBarrierExample1 {
+public class CyclicBarrierExample3 {
 
     //高速线程5个线程 同步等待
-    private static CyclicBarrier barrier = new CyclicBarrier(5);
+    private static CyclicBarrier barrier = new CyclicBarrier(5,()->{
+        log.error("barrier callback is  running");
+    });
 
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -37,7 +39,7 @@ public class CyclicBarrierExample1 {
         Thread.sleep(1000);
         log.error("{} is ready ",threadNum);
 
-        barrier.await(); //线程ok了
+            barrier.await(); //线程ok了
         log.error("{} continue ",threadNum);
     }
 

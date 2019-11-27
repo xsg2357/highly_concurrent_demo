@@ -1,4 +1,4 @@
-package com.example.highly_concurrent_demo.aqs;
+package com.example.highly_concurrent_demo.juc.aqs;
 
 import lombok.extern.slf4j.Slf4j;
 
