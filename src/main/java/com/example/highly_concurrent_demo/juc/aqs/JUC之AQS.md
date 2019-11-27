@@ -1,5 +1,5 @@
 # AbstractQueuedSynchronizer - AQS
-![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/aqs/aqs_1.png?raw=true)
+![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/juc/aqs/aqs_1.png?raw=true)
 * 使用Node实现FIFO队列,可以用于构建锁或者其他同步装置的
 基础框架
 * 利用了一 个int类型表示状态
@@ -14,9 +14,9 @@ release }的方法操纵状态
 * Condition
 * FutureTask
 
-![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/aqs/aqs_2.png?raw=true)
-![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/aqs/aqs_3.png?raw=true)
-![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/aqs/aqs_4.png?raw=true)
+![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/juc/aqs/aqs_2.png?raw=true)
+![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/juc/aqs/aqs_3.png?raw=true)
+![image](https://github.com/xsg2357/highly_concurrent_demo/blob/master/src/main/java/com/example/highly_concurrent_demo/juc/aqs/aqs_4.png?raw=true)
 
 ## ReentrantLock与锁
 ### ReentrantLock (可重入锁)和synchronized区别
