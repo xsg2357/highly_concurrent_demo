@@ -58,6 +58,13 @@
             <artifactId>guava</artifactId>
             <version>23.0</version>
         </dependency>
+        <!--        由于redis集群的采用的版本是4.1的，在maven的pom.xml中将jedis的版本改成3.1的就可以了-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>
