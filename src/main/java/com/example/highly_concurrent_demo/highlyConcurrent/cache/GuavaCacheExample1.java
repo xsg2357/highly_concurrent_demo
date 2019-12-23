@@ -5,6 +5,7 @@ import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.annotation.Nullable;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -18,7 +19,7 @@ public class GuavaCacheExample1 {
                 .recordStats() // 开启记录状态数据功能
                 .build(new CacheLoader<String, Integer>() {
                     @Override
-                    public Integer load(String key) throws Exception {
+                    public Integer load(@Nullable String key) throws Exception {
                         return -1;
                     }
                 });
